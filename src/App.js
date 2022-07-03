@@ -1,19 +1,29 @@
+import Display from "./Display";
+import { useEffect } from "react";
+
 function App() {
+  function onBackHandler({ key }) {
+    if (key === "ArrowLeft") {
+      console.debug("left");
+    }
+  }
+  function onForwardHandler({ key }) {
+    if (key === "ArrowRight") {
+      console.debug("right");
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("keydown", onBackHandler);
+    window.addEventListener("keydown", onForwardHandler);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>Stage Groups</h1>
       </header>
+      <Display />
     </div>
   );
 }
