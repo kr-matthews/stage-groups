@@ -1,69 +1,43 @@
-/* Stolen (and modified) with permission from https://github.com/timreyn/usnationals/tree/master/src/static */
+// /* Stolen (and modified) with permission from https://github.com/timreyn/usnationals/tree/master/src/static */
 
-export default function Display() {
+const stages = ["Blue", "Red", "Green", "Orange", "Yellow"];
+const ids = ["b", "r", "g", "o", "y"];
+
+export default function Display({ current, next }) {
+  console.debug("display");
   return (
     <table align="center">
       <tbody>
         <tr>
           <th>Stage</th>
-          <th>Right Now</th>
+          <th>Current Group</th>
           <th>Next up</th>
         </tr>
-        <tr id="r">
-          <td className="name">Red</td>
-          <td className="current">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-          <td className="nextevent">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-        </tr>
-        <tr id="b">
-          <td className="name">Blue</td>
-          <td className="current">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-          <td className="nextevent">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-        </tr>
-        <tr id="g">
-          <td className="name">Green</td>
-          <td className="current">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-          <td className="nextevent">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-        </tr>
-        <tr id="o">
-          <td className="name">Orange</td>
-          <td className="current">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-          <td className="nextevent">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-        </tr>
-        <tr id="y">
-          <td className="name">Yellow</td>
-          <td className="current">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-          <td className="nextevent">
-            <span className="icon"></span>
-            <span className="eventname"></span>
-          </td>
-        </tr>
+        {ids.map((id, index) => (
+          <tr id={id} key={id}>
+            <td className="name">{stages[index]}</td>
+            {current[index].event ? (
+              <td className="current">
+                <span className="icon">
+                  <img src={current[index].event.icon} alt={""}></img>
+                </span>
+                <span className="eventname">{`${current[index].event.name} - Group ${current[index].group}`}</span>
+              </td>
+            ) : (
+              <td className="current"></td>
+            )}
+            {next[index].event ? (
+              <td className="nextevent">
+                <span className="icon">
+                  <img src={next[index].event.icon} alt={""}></img>
+                </span>
+                <span className="eventname">{`${next[index].event.name} - Group ${next[index].group}`}</span>
+              </td>
+            ) : (
+              <td className="nextevent"></td>
+            )}
+          </tr>
+        ))}
       </tbody>
     </table>
   );
