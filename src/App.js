@@ -3,9 +3,7 @@ import { groups } from "./Data";
 import { useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
-function App() {
-  console.debug("app");
-
+export default function App() {
   const [location, setLocation] = useLocalStorage("loc", 0);
 
   function onKeyDown({ key }) {
@@ -31,5 +29,3 @@ function App() {
     </div>
   );
 }
-
-export default App;

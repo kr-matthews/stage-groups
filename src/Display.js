@@ -1,10 +1,18 @@
-// /* Stolen (and modified) with permission from https://github.com/timreyn/usnationals/tree/master/src/static */
+// /* html stolen (and modified) with permission from https://github.com/timreyn/usnationals/tree/master/src/static */
 
 const stages = ["Blue", "Red", "Green", "Orange", "Yellow"];
 const ids = ["b", "r", "g", "o", "y"];
 
+function eventText(name, round, attempt, group) {
+  let str = ``;
+  str += name;
+  round && (str += `${round === "Final" ? `` : ` Round`} ${round}`);
+  attempt && (str += ` Attempt ${attempt}`);
+  group && (str += ` - Group ${group}`);
+  return str;
+}
+
 export default function Display({ current, next }) {
-  console.debug("display");
   return (
     <table align="center">
       <tbody>
@@ -21,7 +29,14 @@ export default function Display({ current, next }) {
                 <span className="icon">
                   <img src={current[index].event.icon} alt={""}></img>
                 </span>
-                <span className="eventname">{`${current[index].event.name} - Group ${current[index].group}`}</span>
+                <span className="eventname">
+                  {eventText(
+                    current[index].event.name,
+                    current[index].round,
+                    current[index].attempt,
+                    current[index].group
+                  )}
+                </span>
               </td>
             ) : (
               <td className="current"></td>
@@ -31,7 +46,14 @@ export default function Display({ current, next }) {
                 <span className="icon">
                   <img src={next[index].event.icon} alt={""}></img>
                 </span>
-                <span className="eventname">{`${next[index].event.name} - Group ${next[index].group}`}</span>
+                <span className="eventname">
+                  {eventText(
+                    next[index].event.name,
+                    next[index].round,
+                    next[index].attempt,
+                    next[index].group
+                  )}
+                </span>
               </td>
             ) : (
               <td className="nextevent"></td>

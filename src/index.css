@@ -37,10 +37,10 @@ td.name {
   text-align: center;
 }
 td.current {
-  width: 20%;
+  width: 45%;
 }
 td.nextevent {
-  width: 70%;
+  width: 45%;
 }
 
 span.eventname {
