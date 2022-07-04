@@ -101,5 +101,9 @@ tr.r {
 
 header {
   text-align: center;
-  padding: 3em;
+  padding: 2em;
+}
+
+.wifi {
+  text-align: center;
 }

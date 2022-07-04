@@ -15,14 +15,14 @@ export const groups = [
     { event: Event.e3m, attempt: 1 },
   ],
   [
-    { event: Event.esq, group: 1 },
+    { event: Event.esq, group: 5 },
     { event: Event.esq, group: 5 },
     {},
     {},
     { event: Event.e3m, attempt: 1 },
   ],
   [
-    { event: Event.esq, group: 2 },
+    { event: Event.esq, group: 6 },
     { event: Event.esq, group: 6 },
     {},
     {},

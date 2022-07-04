@@ -26,6 +26,8 @@ export default function App() {
         <h1>Stage Groups</h1>
       </header>
       <Display current={groups[location]} next={groups[location + 1]} />
+      <h1 className="wifi">Guest Wi-Fi: Westin_CONFERENCE</h1>
+      <h1 className="wifi">Password: nachamps2022</h1>
     </div>
   );
 }
