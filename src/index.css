@@ -107,3 +107,7 @@ header {
 .wifi {
   text-align: center;
 }
+
+td {
+  height: 4.5em;
+}
