@@ -25,7 +25,10 @@ export default function App() {
       <header className="App-header">
         <h1>Stage Groups</h1>
       </header>
-      <Display current={groups[location]} next={groups[location + 1]} />
+      <Display
+        current={groups[Math.min(location, groups.length - 2)]}
+        next={groups[Math.min(location, groups.length - 2) + 1]}
+      />
       <h1 className="wifi">Guest Wi-Fi: Westin_CONFERENCE</h1>
       <h1 className="wifi">Password: nachamps2022</h1>
     </div>
