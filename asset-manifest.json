@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/stage-groups/static/css/main.608a0ada.css",
+    "main.js": "/stage-groups/static/js/main.9ea8745a.js",
+    "index.html": "/stage-groups/index.html",
+    "main.608a0ada.css.map": "/stage-groups/static/css/main.608a0ada.css.map",
+    "main.9ea8745a.js.map": "/stage-groups/static/js/main.9ea8745a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.608a0ada.css",
+    "static/js/main.9ea8745a.js"
+  ]
+}
