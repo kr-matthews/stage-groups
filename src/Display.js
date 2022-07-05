@@ -18,7 +18,7 @@ export default function Display({ current, next }) {
       <tbody>
         <tr>
           <th>Stage</th>
-          <th>Current Group</th>
+          <th>Current</th>
           <th>Next up</th>
         </tr>
         {ids.map((id, index) => (
