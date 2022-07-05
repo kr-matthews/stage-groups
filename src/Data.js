@@ -170,7 +170,7 @@ export const groups = [
     { event: Event.e55, group: 4 },
     {},
     {},
-    { event: Event.e5b, group: "1 & 2" },
+    { event: Event.e5b, group: 1 },
   ],
   [
     { event: Event.e3o, group: 1 },
