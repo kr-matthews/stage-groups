@@ -518,6 +518,9 @@ export const groups = [
     { event: Event.e44, round: 2 },
     {},
   ],
+
+  [{}, {}, {}, {}, {}], // lunch
+
   [
     { event: Event.e33, round: 3 },
     { event: Event.e33, round: 3 },
@@ -525,9 +528,6 @@ export const groups = [
     { event: Event.e33, round: 3 },
     {},
   ],
-
-  [{}, {}, {}, {}, {}], // lunch
-
   [
     { event: Event.esq, round: "Final" },
     { event: Event.esq, round: "Final" },
