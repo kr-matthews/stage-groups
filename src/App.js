@@ -3,6 +3,8 @@ import { groups } from "./Data";
 import { useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 
+// const COMP_NAME = "Richmond Open Summer 2022";
+
 export default function App() {
   const [location, setLocation] = useLocalStorage("loc", 0);
 
@@ -22,15 +24,18 @@ export default function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Stage Groups</h1>
-      </header>
+      <header className="App-header">{/* <h1>{COMP_NAME}</h1> */}</header>
       <Display
         current={groups[Math.min(location, groups.length - 2)]}
         next={groups[Math.min(location, groups.length - 2) + 1]}
       />
-      <h1 className="wifi">Guest Wi-Fi: Westin_CONFERENCE</h1>
-      <h1 className="wifi">Password: nachamps2022</h1>
+      <h1 className="wifi">
+        Please consider donating to the Ukraine Humanitarian Relief Committee at
+        the registration table.
+      </h1>
+      <h1 className="wifi">
+        Wi-Fi: TBD || Password: TBD || Results: Seach "WCA Live"
+      </h1>
     </div>
   );
 }
