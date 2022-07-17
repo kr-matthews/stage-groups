@@ -21,7 +21,11 @@ export default function Display({ current, next }) {
           {current.event ? (
             <td className="current">
               <span className="icon">
-                <img src={current.event.icon} alt={""}></img>
+                <img
+                  className="icon-img"
+                  src={current.event.icon}
+                  alt={""}
+                ></img>
               </span>
               <span className="eventname">
                 {eventText(
@@ -38,7 +42,7 @@ export default function Display({ current, next }) {
           {next.event ? (
             <td className="nextevent">
               <span className="icon">
-                <img src={next.event.icon} alt={""}></img>
+                <img className="icon-img" src={next.event.icon} alt={""}></img>
               </span>
               <span className="eventname">
                 {eventText(

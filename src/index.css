@@ -111,3 +111,10 @@ header {
 td {
   height: 4.5em;
 }
+
+/*  */
+
+.icon-img {
+  max-height: 4em;
+  padding-right: 0.5em;
+}

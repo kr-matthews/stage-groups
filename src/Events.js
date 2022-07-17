@@ -16,6 +16,12 @@ import ipy from "./icons/e_pyram.png";
 import isk from "./icons/e_skewb.png";
 import isq from "./icons/e_sq1.png";
 
+import itu from "./icons/e_tutorial.png";
+import ilu from "./icons/e_lunch.png";
+import iaw from "./icons/e_awards.png";
+
+// import itb from "./icons/e_team_blind.png";
+
 export default class Event {
   static e22 = new Event("2x2x2", i22);
   static e33 = new Event("3x3x3", i33);
@@ -34,6 +40,12 @@ export default class Event {
   static epy = new Event("Pyraminx", ipy);
   static esk = new Event("Skewb", isk);
   static esq = new Event("Square-1", isq);
+
+  static etu = new Event("Tutorial", itu);
+  static elu = new Event("Lunch Break", ilu);
+  static eaw = new Event("Awards", iaw);
+
+  static etb = new Event("Team-Blind (Unofficial)", i3b);
 
   constructor(name, icon) {
     this.name = name;
