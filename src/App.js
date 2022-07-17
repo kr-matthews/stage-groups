@@ -6,19 +6,19 @@ import { useLocalStorage } from "./useLocalStorage";
 export default function App() {
   const [location, setLocation] = useLocalStorage("loc", 0);
 
-  function onKeyDown({ key }) {
-    if (key === "ArrowLeft") {
-      setLocation(Math.max(location - 1, 0));
-    } else if (key === "ArrowRight") {
-      setLocation(Math.min(location + 1, groups.length - 2)); // pairs location with location+1, so don't use last
-    }
-  }
-
   useEffect(() => {
+    function onKeyDown({ key }) {
+      if (key === "ArrowLeft") {
+        setLocation(Math.max(location - 1, 0));
+      } else if (key === "ArrowRight") {
+        setLocation(Math.min(location + 1, groups.length - 2)); // pairs location with location+1, so don't use last
+      }
+    }
+
     window.addEventListener("keydown", onKeyDown);
 
     return () => window.removeEventListener("keydown", onKeyDown);
-  });
+  }, [location, setLocation]);
 
   return (
     <div className="App">
