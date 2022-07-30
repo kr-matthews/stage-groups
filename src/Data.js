@@ -28,13 +28,13 @@ let data = [
   { event: Event.e55, group: 1 },
   { event: Event.e55, group: 2 },
 
-  { event: Event.e3o, round: 2, who: "Top 14" },
+  { event: Event.e3o, round: "Final", who: "Top 14" },
 
-  { event: Event.esk, round: 2, who: "Top 14" },
+  { event: Event.esk, round: "Final", who: "Top 14" },
 
-  { event: Event.esq, round: 2, who: "Top 8" },
+  { event: Event.esq, round: "Final", who: "Top 8" },
 
-  { event: Event.e33, round: 2, who: "Top 14" },
+  { event: Event.e33, round: "Final", who: "Top 14" },
 
   { event: Event.eaw },
 
