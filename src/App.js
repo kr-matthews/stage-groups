@@ -34,7 +34,7 @@ export default function App() {
         the registration table.
       </h1>
       <h1 className="wifi">
-        Wi-Fi: TBD || Password: TBD || Results: Search "WCA Live"
+        Wi-Fi: UkrHall -- Password: community -- Results: Search "WCA Live"
       </h1>
     </div>
   );
