@@ -1,11 +1,12 @@
 // /* html stolen (and modified) with permission from https://github.com/timreyn/usnationals/tree/master/src/static */
 
-function eventText(name, round, attempt, group) {
+function eventText(name, round, attempt, group, who) {
   let str = ``;
   str += name;
   round && (str += `${round === "Final" ? `` : ` Round`} ${round}`);
   attempt && (str += ` Attempt ${attempt}`);
   group && (str += ` - Group ${group}`);
+  who && (str += ` - ${who}`);
   return str;
 }
 
@@ -32,7 +33,8 @@ export default function Display({ current, next }) {
                   current.event.name,
                   current.round,
                   current.attempt,
-                  current.group
+                  current.group,
+                  current.who
                 )}
               </span>
             </td>
@@ -49,7 +51,8 @@ export default function Display({ current, next }) {
                   next.event.name,
                   next.round,
                   next.attempt,
-                  next.group
+                  next.group,
+                  next.who
                 )}
               </span>
             </td>
