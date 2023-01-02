@@ -2,6 +2,7 @@ import Display from "./Display";
 import { groups } from "./Data";
 import { useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
+import Event from "./Events";
 
 // const COMP_NAME = "Richmond Open Summer 2022";
 
@@ -22,6 +23,15 @@ export default function App() {
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [location, setLocation]);
 
+  const currentGroupNeedsHelp =
+    !!groups[Math.min(location, groups.length - 2)].round;
+  const currentGroupNeedsQuiet = [
+    Event.e3b,
+    Event.e4b,
+    Event.e5b,
+    Event.e3f,
+  ].includes(groups[Math.min(location, groups.length - 2)].event);
+
   return (
     <div className="App">
       <header className="App-header">{/* <h1>{COMP_NAME}</h1> */}</header>
@@ -29,12 +39,19 @@ export default function App() {
         current={groups[Math.min(location, groups.length - 2)]}
         next={groups[Math.min(location, groups.length - 2) + 1]}
       />
+      {currentGroupNeedsQuiet && (
+        <h1 className="wifi">
+          Please be quiet, competitors need to concentrate - no talking! Thanks.
+        </h1>
+      )}
+      {currentGroupNeedsHelp && (
+        <h1 className="wifi">
+          There are no assigned judges for this group, please come up and help!
+          Thanks.
+        </h1>
+      )}
       <h1 className="wifi">
-        Please consider donating to the Ukraine Humanitarian Relief Committee at
-        the registration table.
-      </h1>
-      <h1 className="wifi">
-        Wi-Fi: UkrHall -- Password: community -- Results: Search "WCA Live"
+        Wi-Fi: KpuGuest -- Live Results: Search "WCA Live"
       </h1>
     </div>
   );
