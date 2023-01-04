@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/stage-groups/static/css/main.9cbca68c.css",
-    "main.js": "/stage-groups/static/js/main.8e72accf.js",
+    "main.js": "/stage-groups/static/js/main.a7df4c35.js",
     "static/media/e_tutorial.png": "/stage-groups/static/media/e_tutorial.fe93f7ca5d42ad8a97fa.png",
     "index.html": "/stage-groups/index.html",
     "main.9cbca68c.css.map": "/stage-groups/static/css/main.9cbca68c.css.map",
-    "main.8e72accf.js.map": "/stage-groups/static/js/main.8e72accf.js.map"
+    "main.a7df4c35.js.map": "/stage-groups/static/js/main.a7df4c35.js.map"
   },
   "entrypoints": [
     "static/css/main.9cbca68c.css",
-    "static/js/main.8e72accf.js"
+    "static/js/main.a7df4c35.js"
   ]
 }
