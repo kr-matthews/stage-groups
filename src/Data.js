@@ -25,6 +25,8 @@ const data = [
 
   { event: Event.elu },
 
+  { event: Event.e3b, who: "All" },
+
   { event: Event.eme, who: "All" },
 
   { event: Event.esk, group: 1 },
@@ -51,8 +53,6 @@ const data = [
   { event: Event.e44, round: "Final", who: "Top 12" },
 
   { event: Event.e3o, round: "Final", who: "Top 12" },
-
-  { event: Event.e3b, who: "All" },
 
   { event: Event.e33, round: "Final", who: "Top 12" },
 
