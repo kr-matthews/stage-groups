@@ -51,6 +51,9 @@ export default function App() {
         </h1>
       )}
       <h1 className="wifi">
+        Thanks to our sponsor Cubing Out Loud - vending from 9:30 to 4:00.
+      </h1>
+      <h1 className="wifi">
         Wi-Fi: KpuGuest -- Live Results: Search "WCA Live"
       </h1>
     </div>
